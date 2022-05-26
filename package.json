@@ -1,0 +1,19 @@
+{
+  "name": "htmlExtension",
+  "displayName": "html处理扩展",
+  "description": "html处理扩展",
+  "version": "0.0.1",
+  "engines": {
+    "civet": "^0.2.1"
+  },
+  "main": "./index.js",
+  "civet": {
+    "activeEvents": [
+      "onContentType:html",
+      "onView: ContentView"
+    ]
+  },
+  "dependencies": {
+  }
+}
+
