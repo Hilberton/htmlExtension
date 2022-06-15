@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>  
+<html>
+<head>  
+    <title>  
+    </title>
+    <style>
+        #_cv_web_content {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            display: block;
+            border: none;
+            width: 100%;
+            height: 95vh;
+        }
+    </style>
+</head>  
+<body style = "text-align:center;">  
+    <div class="viewer" id="_cv_web_content">
+        Html loading
+    </div>
+    <script>
+        acquireCivetApi().ContentView.on('load', (data) => {
+            console.info(`web ${data} loading`)
+            const div = document.getElementById('_cv_web_content')
+            acquireCivetApi().setHtml('webContentView', div, '<iframe src="file://' + data + '">')
+        })
+    </script>
+</body>
+</html>

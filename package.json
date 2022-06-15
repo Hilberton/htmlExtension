@@ -1,19 +1,20 @@
 {
-  "name": "htmlExtension",
-  "displayName": "html处理扩展",
-  "description": "html处理扩展",
+  "name": "web",
+  "displayName": "Civet Html内容扩展",
+  "description": "Civet Html内容扩展",
   "version": "0.0.1",
   "engines": {
-    "civet": "^0.2.1"
+    "civet": "^0.2.0"
   },
   "main": "./index.js",
   "civet": {
     "activeEvents": [
-      "onContentType:html",
+      "onContentType: html",
       "onView: ContentView"
     ]
   },
   "dependencies": {
+    "segment": "^0.1.3",
+    "jsdom": "^19.0.0"
   }
 }
-
